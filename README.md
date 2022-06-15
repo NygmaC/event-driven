@@ -12,6 +12,13 @@ Esse projeto tem como objetivo o estudo de implementação de um sistema de entr
 ## 🛠️ Rodar o projeto
 
 Executando e subindo o projeto de "frontend", o script sobre um server Websocket onde manterá conexão com o client.
+
+** Cada client é identificado pelo parametro "session"
+
 ```bash
 ./app 
 ```
+#### Client
+
+Basta acessar a pagina "index.html" dentro da pasta client, preencher o campo "session" e clicar no botão
+

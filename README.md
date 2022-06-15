@@ -22,3 +22,17 @@ Executando e subindo o projeto de "frontend", o script sobre um server Websocket
 
 Basta acessar a pagina "index.html" dentro da pasta client, preencher o campo "session" e clicar no botão
 
+#### Testar conexão com o client
+
+Requisição local: http://localhost:8080/send
+
+Body da requisição
+
+```bash
+{
+  from:{session do enviador}
+  to: {"session do user destino"},
+  message: "Message"
+} 
+```
+

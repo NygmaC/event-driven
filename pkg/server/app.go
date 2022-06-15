@@ -22,9 +22,9 @@ type Session struct {
 }
 
 type Message struct {
-	From    string
-	Target  string
-	Message string
+	From    string `json:"from"`
+	To      string `json:"to"`
+	Message string `json:"message"`
 }
 
 // Setup de endpoints
@@ -47,7 +47,7 @@ func sendMessage(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//  Get target connection in memory
-	sessionTarget := mapSessions[msg.Target]
+	sessionTarget := mapSessions[msg.To]
 
 	log.Println("Enviar mensagem")
 	log.Println("Target Id: " + sessionTarget.id)

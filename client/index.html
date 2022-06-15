@@ -19,7 +19,7 @@
 
             var session = document.getElementById("session").value;
 
-            socket = new WebSocket("ws://127.0.0.1:8080/ws/"+session);
+            socket = new WebSocket("ws://127.0.0.1:8080/ws?session="+session);
             console.log("Attempting Connection...");
 
             socket.onopen = () => {

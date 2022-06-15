@@ -29,7 +29,7 @@ type Message struct {
 
 // Setup de endpoints
 func setupRoutes() {
-	http.HandleFunc("/ws/{session}", wsEndpoint)
+	http.HandleFunc("/ws", wsEndpoint)
 	http.HandleFunc("/list", listAllSessions)
 	http.HandleFunc("/send", sendMessage)
 }
@@ -96,6 +96,7 @@ func listAllSessions(w http.ResponseWriter, r *http.Request) {
 func wsEndpoint(w http.ResponseWriter, r *http.Request) {
 
 	id := r.URL.Query().Get("session")
+	fmt.Println(id)
 
 	upgrader.CheckOrigin = func(r *http.Request) bool { return true }
 
